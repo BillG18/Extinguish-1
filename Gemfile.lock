@@ -1,12 +1,12 @@
 GIT
   remote: https://github.com/BillG18/haikunator.git
-  revision: 07523eed5ce80af05f08ccf7d3e580c01d4f8d0b
+  revision: 66b2fab5cded43a03ecfa8482957a0259a6bc3dd
   specs:
     haikunator (1.1.0)
 
 GIT
   remote: https://github.com/BillG18/thredded.git
-  revision: c79f8e3427703cd2fb4b378a6a09207bd747cf91
+  revision: 787a32a22d5478c414cd6505f4f9627cd1b68dec
   specs:
     thredded (0.13.4)
       active_record_union (>= 1.2.0)
@@ -56,7 +56,7 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    active_record_union (1.2.0)
+    active_record_union (1.3.0)
       activerecord (>= 4.0)
     activejob (5.1.4)
       activesupport (= 5.1.4)
