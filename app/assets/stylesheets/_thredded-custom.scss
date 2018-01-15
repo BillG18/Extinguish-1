@@ -161,6 +161,7 @@ select:active, select:hover, select:focus {
   }
   li {
     text-align: left;
+    overflow: hidden;
   }
   .table-button {
     margin: 1rem;
@@ -262,6 +263,7 @@ select:active, select:hover, select:focus {
   list-style: none;
   margin: 0;
   font-size:  0.9em;
+  overflow: hidden;
   @include thredded-media-mobile {
     padding-left: 0.75rem;
   }
