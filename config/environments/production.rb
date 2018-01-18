@@ -116,6 +116,11 @@ Rails.application.configure do
         }
   end
   
+config.to_prepare { Devise::SessionsController.force_ssl }
+config.to_prepare { Devise::RegistrationsController.force_ssl }
+config.to_prepare { Devise::PasswordsController.force_ssl }
+
+
 config.action_mailer.perform_caching = false
 config.action_mailer.perform_deliveries = true
 config.action_mailer.raise_delivery_errors = true
