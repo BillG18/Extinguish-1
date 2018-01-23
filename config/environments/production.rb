@@ -136,7 +136,7 @@ password: 'socialsupportnetwork',
 authentication: 'plain',
 enable_starttls_auto: true 
 }
-config.action_mailer.default_url_options = { :host => "https://social-support-network-2-rdicrist.c9users.io" }
+config.action_mailer.default_url_options = { :host => "https://extinguish.io" }
 
   
 end
