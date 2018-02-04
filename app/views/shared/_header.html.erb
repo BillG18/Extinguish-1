@@ -22,8 +22,8 @@
   <div class="bottom-navbar">
     <div class="left-menu">
       <div class="left-menu-content">
-        <%= link_to "About Us", "/info" %> •
-        <%= link_to "Rick's Tips", "/tips" %>
+        <%= link_to "Town Hall", "/concerns" %> •
+        <%= link_to "Resources", "/tips" %>
       </div>
     </div>
     
@@ -41,7 +41,7 @@
     <div class="right-menu">
       <div class="right-menu-content">
         <%= link_to t('nav.forums'), thredded.root_path %> • 
-        <%= link_to "Resources", "/about" %>
+        <%= link_to "Quick Links", "/about" %>
       </div>
     </div>
     
@@ -49,13 +49,13 @@
       <div class="mobile-menu-content">
         <ul class="bottom-navbar">
           <li>
-            <%= link_to "/info" do %>
-              <i class="material-icons md-36">people</i><span class="caption">About Us</span>
+            <%= link_to "/concerns" do %>
+              <i class="material-icons md-36">people</i><span class="caption">Town Hall</span>
             <% end %>
           </li>
           <li>
             <%= link_to "/tips" do %>
-              <i class="material-icons md-36">whatshot</i><span class="caption">Rick's Tips</span>
+              <i class="material-icons md-36">whatshot</i><span class="caption">Resources</span>
             <% end %>
           </li>
           <li>
@@ -72,7 +72,7 @@
           </li>
           <li>
             <%= link_to "/about" do %>
-              <i class="material-icons md-36">import_contacts</i><span class="caption">Resources</span>
+              <i class="material-icons md-36">import_contacts</i><span class="caption">Quick Links</span>
             <% end %>
           </li>
         </ul>

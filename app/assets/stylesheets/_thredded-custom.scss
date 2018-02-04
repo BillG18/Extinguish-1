@@ -14,7 +14,7 @@ body{
   //prevent safari artefacts on tip animations
   //-webkit-perspective: 1000; //breaks chrome header
   -webkit-backface-visibility: hidden;
-  -webkit-transform:translate3d(0,0,0);
+  // -webkit-transform:translate3d(0,0,0);
 } 
 
 select:active, select:hover, select:focus {
@@ -324,4 +324,42 @@ select:active, select:hover, select:focus {
 .resource-list {
   font-weight: bold; 
   list-style-type: none;
+}
+
+// town hall
+#concern-form-title {
+  cursor: pointer;
+}
+#concern-form {
+  display: none;
+}
+.comment-reply {
+  cursor: pointer;
+}
+.comment-form {
+  display: none;
+}
+#concern-comment-chain {
+  padding-left: 0;
+}
+.concerns {
+  .concern {
+    border-bottom: thin solid;
+  }
+  i {
+    transition: all 0.5s;
+    color: $inactive-color;
+    display: block;
+    &:hover {
+    color: $brand-primary;
+    }
+  }
+  .voted {
+    color: $brand-primary;
+  }
+}
+
+#comment-form {
+  padding-bottom: 1rem;
+  border-bottom: thin solid;
 }

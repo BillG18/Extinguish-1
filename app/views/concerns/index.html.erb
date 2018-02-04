@@ -1,0 +1,36 @@
+<div align="center">
+    <h1>Town Hall</h1>
+</div>
+<% concerns = @concerns.sort_by { |concern| concern.votes_for.size }.reverse %>
+<div class="concerns">
+<% concerns.each do |concern| %>
+    <div class="concern">
+    <h1><%= concern.title %></h1>
+    <%= link_to like_concern_path(concern), method: :post do %>
+        <% if  current_user.voted_for? concern %>
+          <i class="material-icons md-36 voted">thumb_up</i><span class="caption"><%= concern.votes_for.size %> up-ricks</span>
+        <% else %>
+          <i class="material-icons md-36">thumb_up</i><span class="caption"><%= concern.votes_for.size %> up-ricks</span>
+        <% end %>
+    <% end %>
+    <%= link_to (concern) do %>
+        <i class="material-icons md-36">comment</i><span class="caption"><%= concern.comment_count %> comments</span>
+    <% end %>
+    </div>
+<% end %>
+</div>
+<br />
+
+<h2 id="concern-form-title" align="center"><a>Submit your own concern</a></h2>
+<div id="concern-form">
+<%= form_for @concern do |f| %>
+    <%= f.text_area :title, placeholder: 'Ex. "Bikes should not be allowed on McAlister"', :required => true, maxlength: 500, id: "title" %>
+    <%= submit_tag "Submit" %>
+<% end %>
+</div>
+<script>
+    $("#concern-form-title").click(function(){
+        $("#concern-form").slideToggle();
+        $("#title").focus();
+    });
+</script>

@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  acts_as_voter
   
   validates :minimum_age, presence: true, acceptance: { message: "must be accepted" }
   validates :terms_of_service, presence: true, acceptance: { message: 'must be accepted' }

@@ -36,4 +36,15 @@ Rails.application.routes.draw do
   match '/contacts',     to: 'contacts#new', via: 'get'
   resources "contacts", only: [:new, :create]
   
+  resources :concerns do
+    member do
+      post "like", to: "concerns#upvote"
+    end
+    resources :comments
+  end
+
+  resources :comments do
+    resources :comments
+  end
+  
 end

@@ -75,6 +75,8 @@ gem 'sdoc'
 gem 'table_print'
 gem 'material_icons' #google icons (used in header)
 
+gem 'acts_as_votable', '~> 0.11.1'
+
 
 group :test do 
   gem 'cucumber-rails', :require => false
